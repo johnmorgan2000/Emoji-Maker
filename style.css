@@ -1,0 +1,21 @@
+/* centering the elements in a container */
+.container > * {
+  margin: 0 auto;
+}
+
+#emoji-toolbar, #emoji-window {
+  border: 1px solid black;
+}
+
+#emoji-window {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+#emoji-toolbar {
+  width: 600px;
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
