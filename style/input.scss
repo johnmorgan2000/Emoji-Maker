@@ -1,10 +1,21 @@
 /* centering the elements in a container */
-.container > * {
+@mixin center() {
     margin: 0 auto;
+}
+
+.container > * {
+    @include center();
 }
 
 %simple-border {
     border: 1px solid black;
+}
+
+%toolbar-btn-basics {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    border: 0;
 }
 
 #emoji-window {
@@ -14,8 +25,23 @@
     @extend %simple-border;
 }
 
-#emoji-toolbar {
-    width: 600px;
+.toolbar {
+    width: 400px;
     height: 100px;
-    @extend %simple-border;
+    border: 1px solid purple;
+    border-radius: 20px;
+    @include center();
+
+    button.leftBtn {
+        @extend %toolbar-btn-basics;
+        float: left;
+        border-radius: 20px 0px 0px 20px;
+        
+    }
+    button.rightBtn {
+        @extend %toolbar-btn-basics;
+        float: right;
+        border-radius: 0px 20px 20px 0px;
+        
+    }
 }

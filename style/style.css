@@ -3,8 +3,15 @@
   margin: 0 auto;
 }
 
-#emoji-toolbar, #emoji-window {
+#emoji-window {
   border: 1px solid black;
+}
+
+.toolbar button.rightBtn, .toolbar button.leftBtn {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  border: 0;
 }
 
 #emoji-window {
@@ -13,9 +20,20 @@
   margin-bottom: 10px;
 }
 
-#emoji-toolbar {
-  width: 600px;
+.toolbar {
+  width: 400px;
   height: 100px;
+  border: 1px solid purple;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.toolbar button.leftBtn {
+  float: left;
+  border-radius: 20px 0px 0px 20px;
+}
+.toolbar button.rightBtn {
+  float: right;
+  border-radius: 0px 20px 20px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
