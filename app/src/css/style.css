@@ -3,26 +3,17 @@
   margin: 0 auto;
 }
 
-#emoji-window {
-  border: 1px solid black;
-}
-
 .toolbar button.rightBtn, .toolbar button.leftBtn {
   width: 30px;
   height: 100%;
   display: flex;
   border: 0;
-}
-
-#emoji-window {
-  width: 300px;
-  height: 300px;
-  margin-bottom: 10px;
+  text-align: center;
 }
 
 .toolbar {
-  width: 400px;
-  height: 100px;
+  width: 600px;
+  height: 120px;
   border: 1px solid purple;
   border-radius: 20px;
   margin: 0 auto;
@@ -34,6 +25,9 @@
 .toolbar button.rightBtn {
   float: right;
   border-radius: 0px 20px 20px 0px;
+}
+.toolbar button.leftBtn:hover, .toolbar button.rightBtn:hover {
+  background-color: lightgrey;
 }
 
 /*# sourceMappingURL=style.css.map */

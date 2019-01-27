@@ -16,18 +16,14 @@
     height: 100%;
     display: flex;
     border: 0;
+    text-align: center;
+    
 }
 
-#emoji-window {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 10px;
-    @extend %simple-border;
-}
 
 .toolbar {
-    width: 400px;
-    height: 100px;
+    width: 600px;
+    height: 120px;
     border: 1px solid purple;
     border-radius: 20px;
     @include center();
@@ -43,5 +39,9 @@
         float: right;
         border-radius: 0px 20px 20px 0px;
         
+    }
+
+    button.leftBtn:hover , button.rightBtn:hover{
+        background-color: lightgrey;
     }
 }
