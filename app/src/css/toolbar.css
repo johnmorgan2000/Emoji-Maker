@@ -1,0 +1,29 @@
+.toolbar{
+    border: 1px solid purple;
+    width: 600px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.parts{
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+.toolbar button {
+    height: 100%;
+    border: none;
+}
+
+.toolbar button.leftBtn{
+    border-radius: 20px 0 0 20px;
+
+}
+
+.toolbar button.rightBtn{
+    border-radius: 0 20px 20px 0;
+    
+}

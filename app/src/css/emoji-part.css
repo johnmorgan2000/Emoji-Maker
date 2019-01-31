@@ -1,0 +1,12 @@
+.emoji-part {
+    width: 100px;
+    height: 75px;
+    min-width: 100px;
+    border: 1px solid grey;
+    border-radius: 10%;
+    margin: auto 10px auto 10px;
+    
+}
+.emoji-part .active {
+    background-color: blue;
+}
