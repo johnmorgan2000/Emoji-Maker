@@ -5,20 +5,28 @@ import EmojiPart from "./EmojiPart";
 export class ToolBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {tab: "head", selected: 0};
+        this.toggleSelected = this.toggleSelected.bind(this);
+
     }
 
     render() {
         return (
             <div className="toolbar">
-                <button className="leftBtn">L</button>
                 <div className="parts">
-                    {this.props.emojis.map(emoji => (
-                        <EmojiPart />
-                    ))}
+                    {this.props.emojis.heads.map(emoji => (
+                        <EmojiPart id={emoji.id} 
+                        selected={this.state.selected} 
+                        onClick={()=> this.toggleSelected(emoji.id)}/>))
+                    }
                 </div>
-                <button className="rightBtn">R</button>
             </div>
         );
     }
+
+    toggleSelected(id) {
+        this.setState({selected: id});
+    }
+
+
 }
