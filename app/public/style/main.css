@@ -1,0 +1,12 @@
+:root{
+    --center-horizontal: 0 auto;
+    --lightblue: rgb(199, 241, 255);
+}
+
+body{
+    background-color: var(--lightblue);
+}
+
+.toolbar{
+    margin: var(--center-horizontal);
+}
