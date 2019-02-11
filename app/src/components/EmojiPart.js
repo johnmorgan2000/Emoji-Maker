@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import "../css/emoji-part.css";
 
 export class EmojiPart extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
 
     render() {
         var className;
-        if (this.props.selected == this.props.id) {
+        if (this.props.selected === this.props.id) {
             className = "emoji-part active";
         } else {
             className = "emoji-part";
