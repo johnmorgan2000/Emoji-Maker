@@ -5,8 +5,8 @@
     border: 1px solid grey;
     border-radius: 10%;
     margin: auto 10px auto 10px;
-    
 }
-.emoji-part .active {
-    background-color: blue;
+.active {
+    background-color: rgb(243, 243, 243);
+    border: 4px solid lightblue;
 }

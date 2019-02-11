@@ -5,9 +5,6 @@ import EmojiPart from "./EmojiPart";
 export class ToolBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {tab: "head", selected: 0};
-        this.toggleSelected = this.toggleSelected.bind(this);
-
     }
 
     render() {
@@ -16,17 +13,15 @@ export class ToolBar extends React.Component {
                 <div className="parts">
                     {this.props.emojis.heads.map(emoji => (
                         <EmojiPart id={emoji.id} 
-                        selected={this.state.selected} 
-                        onClick={()=> this.toggleSelected(emoji.id)}/>))
+                        selected={this.props.selected} 
+                        onClick={()=> this.props.toggleSelected(emoji.id)}/>))
                     }
                 </div>
             </div>
         );
     }
 
-    toggleSelected(id) {
-        this.setState({selected: id});
-    }
+    
 
 
 }
