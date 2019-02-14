@@ -13,7 +13,7 @@ export class EmojiPart extends Component {
 
         return (
             <div className={className} onClick={this.props.onClick}>
-                <p>hey</p>
+                <img src={this.props.src}/>
             </div>
         );
     }
