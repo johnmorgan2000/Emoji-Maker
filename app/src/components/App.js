@@ -3,21 +3,23 @@ import { Canvas } from "./Canvas";
 import { ToolBar } from "./ToolBar";
 
 const heads = [
-        { id: 1, src: "/images/yellow-circle.png", alt: "" },
-        { id: 2, src: "/images/red-circle.png", alt: "" },
-        { id: 3, src: "/images/blue-circle.png", alt: "" }
+        { id: 1, src: "/images/head1.png", alt: "" },
+        { id: 2, src: "/images/head2.png", alt: "" },
+        { id: 3, src: "/images/head3.png", alt: "" },
+        { id: 4, src: "/images/head4.png", alt: "" }
     ];
 
 const eyes = [
         { id: 1, src: "/images/eyes1.png", alt: "" },
-        { id: 2, src: "/images/eyes1.png", alt: "" },
-        { id: 3, src: "/images/eyes1.png", alt: "" }
+        { id: 2, src: "/images/eyes2.png", alt: "" },
+        { id: 3, src: "/images/eyes3.png", alt: "" },
+        { id: 4, src: "/images/eyes4.png", alt: "" }
     ];
 
 const mouths = [
     { id: 1, src: "/images/mouth1.png", alt: "" },
-    { id: 2, src: "/images/mouth1.png", alt: "" },
-    { id: 3, src: "/images/mouth1.png", alt: "" }
+    { id: 2, src: "/images/mouth2.png", alt: "" },
+    { id: 3, src: "/images/mouth3.png", alt: "" }
 ];   
 class App extends Component {
     constructor(props){
