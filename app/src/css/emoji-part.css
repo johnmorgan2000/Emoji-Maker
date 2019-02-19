@@ -16,3 +16,12 @@
     height: 75px;
     margin: 0 auto 0 auto;
 }
+
+.part-img {
+    display: block;
+    background: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
