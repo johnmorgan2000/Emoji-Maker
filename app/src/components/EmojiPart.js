@@ -13,7 +13,10 @@ export class EmojiPart extends Component {
 
         return (
             <div className={className} onClick={this.props.onClick}>
-                <img src={this.props.src}/>
+                <div className="part-img" style={{backgroundImage: "url(" + this.props.src + ")"}}>
+
+                </div>
+                {/* <img class="emoji-part-img" src={this.props.src}/> */}
             </div>
         );
     }
