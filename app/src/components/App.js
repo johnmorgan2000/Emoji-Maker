@@ -6,7 +6,8 @@ const heads = [
         { id: 1, src: "/images/head1.png", alt: "" },
         { id: 2, src: "/images/head2.png", alt: "" },
         { id: 3, src: "/images/head3.png", alt: "" },
-        { id: 4, src: "/images/head4.png", alt: "" }
+        { id: 4, src: "/images/head4.png", alt: "" },
+        { id: 5, src: "/images/head5.png", alt: "" }
     ];
 
 const eyes = [
@@ -32,16 +33,23 @@ class App extends Component {
             mouthSrc: mouths[0].src,
         };
         this.toggleSelected = this.toggleSelected.bind(this);
+        this.randomize = this.randomize.bind(this);
     }
 
     render() {
         return (
             <div className="App">
+                
                 <Canvas 
                 headSrc={this.state.headSrc} 
                 eyesSrc={this.state.eyesSrc}
                 mouthSrc={this.state.mouthSrc}
                 />
+
+                <div className="buttonContainer">
+                    <button className="randomBtn" onClick={this.randomize}>Randomize</button>
+                </div>
+                
 
                 <ToolBar emojis={heads} 
                 toggleSelected={this.toggleSelected} 
@@ -58,8 +66,31 @@ class App extends Component {
                 selected={this.state.selectedMouth}
                 part="mouth"
                 />
+                
             </div>
         );
+    }
+
+    randomize(){
+        var headId = randomNumberGenerator(1, heads.length);
+        var eyesId = randomNumberGenerator(1, eyes.length);
+        var mouthId = randomNumberGenerator(1, mouths.length);
+
+        var headSource = getSourceById(headId, heads);
+        var mouthSource = getSourceById(mouthId, mouths);
+        var eyesSource = getSourceById(eyesId, eyes);
+
+        console.log(headId);
+
+        this.setState({
+            selectedHead: headId,
+            headSrc: headSource,
+            selectedEyes: eyesId,
+            eyesSrc: eyesSource,
+            selectedMouth: mouthId,
+            mouthSrc: mouthSource
+        })
+
     }
 
     toggleSelected(id,src, part) {
@@ -71,9 +102,22 @@ class App extends Component {
         }else if (part === "mouth"){
             this.setState({selectedMouth: id, mouthSrc: src});
         }
-        
     }
     
 }
+
+function getSourceById(id, list){
+    for (var i of list){
+        if (i.id === id){
+            return i.src
+        }
+    }
+}
+
+function randomNumberGenerator(min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 export default App;
